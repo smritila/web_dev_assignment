@@ -72,24 +72,24 @@ function App() {
                 </Box>
                 <Box sx={{ width: "24%" }}>
                   <InfoCard
-                    title="Total Cancelled"
-                    value="5"
+                    title="Total Delivered"
+                    value="70"
                     icon={<i className="someIcon" />}
                     bgColor="#f44336"
                   />
                 </Box>
                 <Box sx={{ width: "24%" }}>
                   <InfoCard
-                    title="Total Delivered"
-                    value="70"
+                    title="Total Cancelled"
+                    value="05"
                     icon={<i className="someIcon" />}
                     bgColor="#4caf50"
                   />
                 </Box>
                 <Box sx={{ width: "24%" }}>
                   <InfoCard
-                    title="Total Delivered"
-                    value="70"
+                    title="Total Revenue"
+                    value="$12K"
                     icon={<i className="someIcon" />}
                     bgColor="#4caf50"
                   />
