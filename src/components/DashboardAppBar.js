@@ -1,8 +1,18 @@
 import React from "react";
-import { AppBar, Toolbar, IconButton, InputBase } from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
+import {
+  AppBar,
+  Toolbar,
+  IconButton,
+  InputBase,
+  Avatar,
+  Badge,
+} from "@mui/material";
+
 import SearchIcon from "@mui/icons-material/Search";
-import AccountCircle from "@mui/icons-material/AccountCircle";
+
+import MailOutlineIcon from "@mui/icons-material/MailOutline";
+import SettingsIcon from "@mui/icons-material/Settings";
+import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import { styled } from "@mui/material/styles";
 
 const Search = styled("div")(({ theme }) => ({
@@ -52,9 +62,7 @@ const DashboardAppBar = () => {
           edge="start"
           color="inherit"
           aria-label="open drawer"
-        >
-          <MenuIcon />
-        </IconButton>
+        ></IconButton>
         <Search>
           <SearchIconWrapper>
             <SearchIcon />
@@ -64,14 +72,22 @@ const DashboardAppBar = () => {
             inputProps={{ "aria-label": "search" }}
           />
         </Search>
-        <IconButton
-          size="large"
-          edge="end"
-          aria-label="account of current user"
-          aria-haspopup="true"
-          color="inherit"
-        >
-          <AccountCircle />
+        <div style={{ flexGrow: 1 }} />
+        <IconButton color="inherit">
+          <MailOutlineIcon />
+        </IconButton>
+        <IconButton color="inherit">
+          <SettingsIcon />
+        </IconButton>
+
+        <IconButton size="large" color="inherit">
+          <Badge badgeContent={2} color="error">
+            <NotificationsNoneIcon />
+          </Badge>
+        </IconButton>
+
+        <IconButton edge="end" color="inherit">
+          <Avatar alt="Profile picture" src="" />
         </IconButton>
       </Toolbar>
     </AppBar>
