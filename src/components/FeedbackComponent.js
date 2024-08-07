@@ -29,7 +29,7 @@ const feedbacks = [
 
 const DemoPaper = styled(Paper)(({ theme }) => ({
   width: "100%",
-  height: "auto",
+  height: "100%",
   padding: theme.spacing(2),
   ...theme.typography.body2,
 }));
@@ -59,8 +59,8 @@ const FeedbackComponents = () => {
       </Typography>
       {feedbacks.map((feedback, idx) => (
         <React.Fragment key={idx}>
+          {idx > 0 && <Divider sx={{ my: 1 }} />}
           <FeedbackComponent {...feedback} />
-          <Divider sx={{ my: 1 }} />
         </React.Fragment>
       ))}
     </DemoPaper>

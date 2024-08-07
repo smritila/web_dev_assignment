@@ -24,7 +24,7 @@ const rows = [
   createData("Gingerbread", 356, 3.7, "Cancelled"),
   createData("Jelly Bean", 150, 0.0, "Pending"),
   createData("Lollipop", 467, 39.0, "Delivered"),
-  // createData("Honeycomb", 408, 3.2, "Pending"),
+  createData("Honeycomb", 408, 3.2, "Pending"),
   // createData("Ice Cream", 237, 9.0, "Delivered"),
   // createData("Pie", 452, 18.5, "Cancelled"),
   // createData("Brownie", 418, 22.0, "Pending"),

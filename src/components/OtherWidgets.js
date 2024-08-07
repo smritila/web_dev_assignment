@@ -16,7 +16,7 @@ import { red, blue, green } from "@mui/material/colors";
 
 const DemoPaper = styled(Paper)(({ theme }) => ({
   width: "100%",
-  height: "auto",
+  height: "100%",
   padding: theme.spacing(2),
   ...theme.typography.body2,
 }));

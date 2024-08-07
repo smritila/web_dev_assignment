@@ -54,7 +54,8 @@ function App() {
                 bgcolor: "white",
                 display: "grid",
                 gridTemplateColumns: "65% auto",
-                gridTemplateRows: "1fr 3fr 6fr",
+                gridTemplateRows: "auto auto auto",
+                rowGap: "20px",
                 columnGap: "20px",
               }}
             >
@@ -113,7 +114,8 @@ function App() {
                 <InfoCard
                   title="Net Profit"
                   value="$6759.25"
-                  icon={<i className="someIcon" />}
+                  icon={<ShoppingCartIcon />}
+                  percentChange={3}
                   bgColor="#2196f3"
                 />
               </Box>
@@ -129,13 +131,8 @@ function App() {
                 sx={{
                   gridRow: "2 / span 1",
                   gridColumn: "2 / span 1",
-                  display: "flex",
-                  flexDirection: "column",
                 }}
               >
-                {/* <SmallInfoCard title="Goals" content="Content here" />
-                <SmallInfoCard title="Popular Dishes" content="Content here" />
-                <SmallInfoCard title="Menus" content="Content here" /> */}
                 <OtherWidgets />
               </Box>
               <Box
