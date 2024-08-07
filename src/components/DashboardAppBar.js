@@ -8,8 +8,9 @@ import {
   Badge,
 } from "@mui/material";
 
-import SearchIcon from "@mui/icons-material/Search";
+import AvatarImage from "../assets/images/avatar.jpg";
 
+import SearchIcon from "@mui/icons-material/Search";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import SettingsIcon from "@mui/icons-material/Settings";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
@@ -57,12 +58,6 @@ const DashboardAppBar = () => {
   return (
     <AppBar position="static">
       <Toolbar>
-        <IconButton
-          size="large"
-          edge="start"
-          color="inherit"
-          aria-label="open drawer"
-        ></IconButton>
         <Search>
           <SearchIconWrapper>
             <SearchIcon />
@@ -87,7 +82,7 @@ const DashboardAppBar = () => {
         </IconButton>
 
         <IconButton edge="end" color="inherit">
-          <Avatar alt="Profile picture" src="" />
+          <Avatar alt="Profile picture" src={AvatarImage}></Avatar>
         </IconButton>
       </Toolbar>
     </AppBar>

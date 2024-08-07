@@ -8,6 +8,9 @@ import ActivityGraph from "./components/ActivityGraph";
 import OrderTable from "./components/OrderTable";
 import FeedbackComponent from "./components/FeedbackComponent";
 import SmallInfoCard from "./components/SmallInfoCard";
+import OtherWidgets from "./components/OtherWidgets";
+
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 
 function App() {
   return (
@@ -67,7 +70,7 @@ function App() {
                   <InfoCard
                     title="Total Orders"
                     value="75"
-                    icon={<i className="ShoppingBasketIcon" />}
+                    icon={<ShoppingCartIcon />}
                     percentChange={3}
                     bgColor="#3f51b5"
                   />
@@ -76,7 +79,7 @@ function App() {
                   <InfoCard
                     title="Total Delivered"
                     value="70"
-                    icon={<i className="someIcon" />}
+                    icon={<ShoppingCartIcon />}
                     percentChange={3}
                     bgColor="#f44336"
                   />
@@ -85,7 +88,7 @@ function App() {
                   <InfoCard
                     title="Total Cancelled"
                     value="05"
-                    icon={<i className="someIcon" />}
+                    icon={<ShoppingCartIcon />}
                     percentChange={5}
                     bgColor="#4caf50"
                   />
@@ -94,7 +97,7 @@ function App() {
                   <InfoCard
                     title="Total Revenue"
                     value="$12K"
-                    icon={<i className="someIcon" />}
+                    icon={<ShoppingCartIcon />}
                     percentChange={3}
                     bgColor="#4caf50"
                   />
@@ -130,43 +133,28 @@ function App() {
                   flexDirection: "column",
                 }}
               >
-                <SmallInfoCard title="Goals" content="Content here" />
+                {/* <SmallInfoCard title="Goals" content="Content here" />
                 <SmallInfoCard title="Popular Dishes" content="Content here" />
-                <SmallInfoCard title="Menus" content="Content here" />
+                <SmallInfoCard title="Menus" content="Content here" /> */}
+                <OtherWidgets />
+              </Box>
+              <Box
+                sx={{
+                  gridRow: "3 / span 1",
+                  gridColumn: "1 / span 1",
+                }}
+              >
+                <OrderTable />
+              </Box>
+              <Box
+                sx={{
+                  gridRow: "3 / span 1",
+                  gridColumn: "2 / span 1",
+                }}
+              >
+                <FeedbackComponent />
               </Box>
             </Box>
-            {/* <Grid container spacing={3}>
-              <Grid item xs={12} sm={6} md={3}>
-
-              </Grid>
-              <Grid item xs={12} sm={6} md={3}>
-                <InfoCard
-                  title="Total Delivered"
-                  value="70"
-                  icon={<i className="someIcon" />}
-                  bgColor="#4caf50"
-                />
-              </Grid>
-              <Grid item xs={12} sm={6} md={3}>
-
-              </Grid>
-              <Grid item xs={12} sm={6} md={3}>
-
-              </Grid>
-              <Grid item xs={12} md={8}>
-                <ActivityGraph />
-              </Grid>
-              <Grid item xs={6} md={4}>
-
-              </Grid>
-
-              <Grid item xs={12}>
-                <OrderTable />
-              </Grid>
-              <Grid item xs={12} md={6}>
-                <FeedbackComponent />
-              </Grid>
-            </Grid> */}
           </Box>
         </Box>
       </Container>
