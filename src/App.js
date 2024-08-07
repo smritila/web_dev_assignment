@@ -1,5 +1,6 @@
 import React from "react";
 import { CssBaseline, Grid, Box, Container, Typography } from "@mui/material";
+
 import DashboardAppBar from "./components/DashboardAppBar";
 import SideBar from "./components/SideBar";
 import InfoCard from "./components/InfoCard";
@@ -66,7 +67,8 @@ function App() {
                   <InfoCard
                     title="Total Orders"
                     value="75"
-                    icon={<i className="someIcon" />}
+                    icon={<i className="ShoppingBasketIcon" />}
+                    percentChange={3}
                     bgColor="#3f51b5"
                   />
                 </Box>
@@ -75,6 +77,7 @@ function App() {
                     title="Total Delivered"
                     value="70"
                     icon={<i className="someIcon" />}
+                    percentChange={3}
                     bgColor="#f44336"
                   />
                 </Box>
@@ -83,6 +86,7 @@ function App() {
                     title="Total Cancelled"
                     value="05"
                     icon={<i className="someIcon" />}
+                    percentChange={5}
                     bgColor="#4caf50"
                   />
                 </Box>
@@ -91,6 +95,7 @@ function App() {
                     title="Total Revenue"
                     value="$12K"
                     icon={<i className="someIcon" />}
+                    percentChange={3}
                     bgColor="#4caf50"
                   />
                 </Box>
@@ -99,6 +104,7 @@ function App() {
                 sx={{
                   gridRow: "1 / span 1",
                   gridColumn: "2 / span 1",
+                  width: "100%",
                 }}
               >
                 <InfoCard
@@ -131,7 +137,7 @@ function App() {
             </Box>
             {/* <Grid container spacing={3}>
               <Grid item xs={12} sm={6} md={3}>
-                
+
               </Grid>
               <Grid item xs={12} sm={6} md={3}>
                 <InfoCard
@@ -142,16 +148,16 @@ function App() {
                 />
               </Grid>
               <Grid item xs={12} sm={6} md={3}>
-                
+
               </Grid>
               <Grid item xs={12} sm={6} md={3}>
-                
+
               </Grid>
               <Grid item xs={12} md={8}>
                 <ActivityGraph />
               </Grid>
               <Grid item xs={6} md={4}>
-                
+
               </Grid>
 
               <Grid item xs={12}>
